@@ -9,6 +9,11 @@ function davant () {
         enrrere_girar()
     }
 }
+input.onButtonPressed(Button.A, function () {
+    led.unplot(2, 0)
+    led.plot(2, 2)
+    davant()
+})
 function enrrere_girar () {
     motorbit.back(100)
     basic.pause(1000)
@@ -37,6 +42,9 @@ function darrere () {
         enrrere_girar()
     }
 }
+function temporitzacio () {
+	
+}
 let sonar_1 = 0
 let alerta_2 = 0
 let linia_darrera = 0
@@ -45,7 +53,6 @@ let gir = 0
 let alerta_1 = 0
 let linia_davant = 0
 led.plot(2, 0)
-davant()
 basic.forever(function () {
     linia_davant = pins.digitalReadPin(DigitalPin.P15)
     linia_darrera = pins.digitalReadPin(DigitalPin.P16)
